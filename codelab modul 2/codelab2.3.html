@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 300px; margin: 20px auto; }
+        input, button { margin: 5px 0; padding: 5px; width: 100%; }
+        .error { color: red; display: none; }
+    </style>
+</head>
+<body>
+    <h2>Simple Form Validation</h2>
+    <form id="myForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Enter your name">
+        <p id="nameError" class="error">Name is required</p>
+        
+        <input type="email" id="email" placeholder="Enter your email">
+        <p id="emailError" class="error">Valid email is required</p>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var isValid = true;
+
+            if (name == "") {
+                document.getElementById('nameError').style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById('nameError').style.display = "none";
+            }
+
+            if (email == "" || !email.includes('@')) {
+                document.getElementById('emailError').style.display = "block";
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = "none";
+            }
+
+            if (!isValid) {
+                alert("Isi semua woi.");
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
