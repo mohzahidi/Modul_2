@@ -1,0 +1,112 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #3a4374;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+#todo-form {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#todo-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #e0e6ed;
+    border-radius: 6px 0 0 6px;
+    transition: border-color 0.3s ease;
+}
+
+#todo-input:focus {
+    outline: none;
+    border-color: #7e94bf;
+}
+
+button {
+    padding: 12px 20px;
+    background: #7e94bf;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #6a7fa8;
+}
+
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    background: #f9fafc;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.todo-item span {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.todo-item button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.todo-item button:hover {
+    transform: scale(1.05);
+}
+
+.todo-item button.edit {
+    background: #7eb8bf;
+    margin-right: 8px;
+}
+
+.todo-item button.edit:hover {
+    background: #6aa0a7;
+}
+
+.todo-item button.delete {
+    background: #bf7e7e;
+}
+
+.todo-item button.delete:hover {
+    background: #a86a6a;
+}
